@@ -1,0 +1,51 @@
+{
+  "expo": {
+    "name": "Pausa Occhi",
+    "slug": "pausa-occhi",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0a0f0d"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.tuonome.pausaocchi",
+      "infoPlist": {
+        "UIBackgroundModes": ["fetch", "remote-notification"]
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0a0f0d"
+      },
+      "package": "com.tuonome.pausaocchi",
+      "permissions": ["RECEIVE_BOOT_COMPLETED", "VIBRATE", "WAKE_LOCK"]
+    },
+    "plugins": [
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#6ee7b7",
+          "sounds": [],
+          "android": {
+            "channelId": "pausa-occhi-reminders",
+            "channelName": "Promemoria Pausa",
+            "channelDescription": "Notifiche per la regola 20-20-20"
+          }
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "your-project-id-here"
+      }
+    }
+  }
+}
